@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyPix</title>
+</head>
+<body>
+    
+    <h1>Smart-Fit Pro</h1>
+    <div id='status'>
+    </div>
+
+    <form name="uploadForm">
+        <table>
+          <tbody>
+
+            <tr>
+              <td>Select Image - <input id="upload-Image" type="file" onchange="loadImageFile()" /></td>
+            </tr>
+            
+             <tr>
+              <td>Compress Img - <img id="upload-Preview" /></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </form>
+
+      <canvas id='outputCanvas' > </canvas>
+    <canvas id='offScreen'> </canvas>
+
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+  <!-- Load BodyPix -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0.5/dist/body-pix.min.js"></script>
+  <script src="sketch3.js"></script>
+
+</html>
