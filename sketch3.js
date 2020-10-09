@@ -228,7 +228,7 @@ function find_image_height(segmented){
   head = [ (top%image_width)  , (top - ((top%image_width))) / image_width ] ;
   
 
-  var bottom =   Math.max( matrix.indexOf(21) , matrix.indexOf(23)  )  + 1;
+  var bottom =   Math.max( matrix.lastIndexOf(21) , matrix.lastIndexOf(23)  )  + 1;
   foot = [ (bottom%image_width) , (((bottom - (bottom%image_width))) / image_width) ] ;
 
   console.log("BOTTOM "+ bottom);
@@ -278,7 +278,7 @@ function arm_length(matrix, scaling_factor) {
   var image_width = img.width;
   var flat_matrix = matrix.flat()
   rightShoulder=  flat_matrix.indexOf(4)+1;
-  rightWrist = flat_matrix.lastIndexOf(11)+1 ;
+  rightWrist = flat_matrix.indexOf(11)+1 ;
   
   rightShoulder = [ (rightShoulder%image_width)  , (rightShoulder - ((rightShoulder%image_width))) / image_width ] ;
   rightWrist = [ (rightWrist%image_width)  , (rightWrist - ((rightWrist%image_width))) / image_width ] ;
@@ -288,6 +288,7 @@ function arm_length(matrix, scaling_factor) {
 
   return dist_inches;
 };
+
 
 function euclideanDist(p1 , p2){
     x1 = p1[0];
