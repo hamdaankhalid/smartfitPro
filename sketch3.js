@@ -154,7 +154,7 @@ async function performSegmentationAndDrawOutput(segmentationMethod, drawingMetho
 
   await performSegmentation(segmentationMethod);
 
-  drawOutput(drawingMethod);
+  //drawOutput(drawingMethod);
 }
 
 async function performSegmentation(segmentationMethod) {
@@ -173,6 +173,14 @@ async function performSegmentation(segmentationMethod) {
     console.log("SHOULDER", shoulder_length(image_matrix, scaled));
     console.log("LEG LENGTH", leg_length(image_matrix, scaled));
     console.log("ARM LENGTH", arm_length(image_matrix, scaled));
+
+    var results = [shoulder_length(image_matrix, scaled) , leg_length(image_matrix, scaled), arm_length(image_matrix, scaled)]
+    
+    results.forEach((i) =>{
+    var para = document.createElement("P")    ;          // Create a <p> element
+    para.innerText = i ;          // Insert text
+    document.body.appendChild(para);   
+    }); 
 
 }
 
