@@ -228,7 +228,7 @@ function find_image_height(segmented){
   head = [ (top%image_width)  , (top - ((top%image_width))) / image_width ] ;
   
 
-  var bottom =   Math.max( matrix.lastIndexOf(21) , matrix.lastIndexOf(23)  )  + 1;
+  var bottom =   Math.max( matrix.indexOf(21) , matrix.indexOf(23)  )  + 1;
   foot = [ (bottom%image_width) , (((bottom - (bottom%image_width))) / image_width) ] ;
 
   console.log("BOTTOM "+ bottom);
