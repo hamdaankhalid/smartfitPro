@@ -139,10 +139,10 @@ async function loadModelAndDrawOutput(architecture, segmentationMethod, drawingM
 
 
   // draw proofs
-//   draw_proof(head, foot);
-//   draw_proof(rightShoulder, rightWrist);
-//   draw_proof(leftLeg, leftAnkle);
-//   draw_proof(leftArmUp, rightArmUp);
+  draw_proof(head, foot);
+  draw_proof(rightShoulder, rightWrist);
+  draw_proof(leftLeg, leftAnkle);
+  draw_proof(leftArmUp, rightArmUp);
   setStatus('');
 }
 
